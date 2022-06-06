@@ -1,10 +1,10 @@
+#include <stdio.h>
+
 int main (void) 
 {
 	/*will print a string*/
 
-	char a1[] = "\"Programming is like building a multilingual puzzle";
-	
-	int puts(const char a1); /*writing the string to stdout*/
+	puts("\"Programming is like building a multilingual puzzle"); /*writing the string to stdout*/
 
 	return(0);
 }
