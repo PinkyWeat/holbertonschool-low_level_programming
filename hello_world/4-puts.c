@@ -1,5 +1,3 @@
-#!/bin/bash
-
 int main (void) 
 {
 	/*will print a string*/
