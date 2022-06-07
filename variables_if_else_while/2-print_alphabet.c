@@ -8,9 +8,10 @@
  */
 int main(void)
 {
-	int x = 'a';
+	int x;
 
-	while (x <= 'z')
+	for (x = 'A'; x <= 'Z'; x++)
+		x = tolower(x);
 		putchar(x);
 		x++;
 }
