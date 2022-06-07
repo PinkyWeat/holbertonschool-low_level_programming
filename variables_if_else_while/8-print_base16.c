@@ -1,23 +1,25 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
 /**
- * main - will print a string
+ * main - entry point
  *
  * Return: Always 0 (Success)
  */
 int main(void)
 {
 	int x;
+	int j;
 
-	for (x = 'a'; x <= 'z'; x++)
+	while (x <= '9')
 	{
 		putchar(x);
+		x++;
 	}
-	for (x = 'A'; x <= 'Z'; x++)
+	while (j <= f)
 	{
-		putchar(x);
+		putchar(j);
+		j++;
 	}
 	putchar('\n');
 	return (0);
+
 }
