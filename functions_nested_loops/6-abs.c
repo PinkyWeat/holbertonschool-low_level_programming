@@ -2,7 +2,7 @@
 /**
  * _abs - absolute value of an integer.
  * @i: number
- * Return: absolute value.
+ * Return: i absolute value.
  */
 int _abs(int i)
 {
@@ -10,7 +10,7 @@ int _abs(int i)
 		return (i);
 	if (i < 0)
 	{
-		i = ( i * (-1));
+		i = (i * (-1));
 		return (i);
 	}
 }
