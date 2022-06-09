@@ -7,5 +7,6 @@
 int print_last_digit(int i)
 {
 	i = (i % 10);
+	_putchart(i);
 	return (i);
 }
