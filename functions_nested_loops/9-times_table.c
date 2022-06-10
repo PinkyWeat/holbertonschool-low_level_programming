@@ -22,11 +22,11 @@ void times_table(void)
 			}
 			_putchar((k % 10) + 48);
 			if (j <= 8)
-			{	
+			{
 				_putchar(',');
 				if (k + i <= 9)
 				{
-					_putchar(' ');	
+					_putchar(' ');
 				}
 				_putchar(' ');
 			}
