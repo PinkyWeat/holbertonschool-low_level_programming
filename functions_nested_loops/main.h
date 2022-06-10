@@ -19,4 +19,4 @@ int print_last_digit(int);
 
 void jack_bauer(void);
 
-#endif
+void times_table(void);
