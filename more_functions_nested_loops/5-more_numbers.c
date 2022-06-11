@@ -1,8 +1,6 @@
 #include "main.h"
 /**
  * more_numbers - shows numbers 0 to 14, 10 times.
- * @i: num
- * @j: num 2
  * Return: Always 0.
  *
  */
