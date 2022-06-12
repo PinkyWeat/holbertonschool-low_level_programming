@@ -5,7 +5,7 @@
  */
 void print_triangle(int size)
 {
-	int s, z;
+	int s, z, c;
 
 	if (size <= 0)
 	{
@@ -19,7 +19,10 @@ void print_triangle(int size)
 			{
 				_putchar(32);
 			}
-			_putchar(35);
+			for (c = 1; c <= z; c++)
+			{	
+				_putchar(35);
+			}
 			_putchar(10);
 
 		}
