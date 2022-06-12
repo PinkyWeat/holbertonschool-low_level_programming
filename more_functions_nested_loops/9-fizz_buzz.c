@@ -24,15 +24,15 @@ int main(void)
 		else if ((i % 5) == 0)
 		{
 			printf("Buzz");
-			putchar(32);
-		}
-		else
-		{
-			printf("%d", i);
 			if (i < 100)
 			{
 				putchar(32);
 			}
+		}
+		else
+		{
+			printf("%d", i);
+			putchar(32);
 		}
 	}
 	putchar(10);
