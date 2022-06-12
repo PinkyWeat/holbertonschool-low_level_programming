@@ -3,7 +3,6 @@
 /**
  * fizz_buzz - helps filter 99.5% of candidates.
  *
- * Return: 0.
  */
 int main(void)
 {
