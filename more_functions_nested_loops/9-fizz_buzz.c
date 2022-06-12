@@ -14,16 +14,22 @@ int fizz_buzz(void)
 		if ((i % 3) && (i % 5))
 		{
 			printf("FizzBuzz");
+			putchar(10);
 		}
 		else if ((i % 3) == 0)
 		{
 			printf("Fizz");
+			putchar(10);
 		}
 		else if ((i % 5) == 0)
 		{
 			printf("Buzz");
+			putchar(10);
 		}
 		else
+		{
 			printf("%d", i);
+			putchar(10);
+		}
 	}
 }
