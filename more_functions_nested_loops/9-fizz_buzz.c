@@ -17,7 +17,7 @@ int fizz_buzz(void)
 		}
 		else if ((i % 3) == 0)
 		{
-			prinf("Fizz");
+			printf("Fizz");
 		}
 		else if ((i % 5) == 0)
 		{
