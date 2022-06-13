@@ -41,12 +41,20 @@ void print_times_table(int n)
 
 			if (j <= n)
 			{
-				_putchar(',');
-				if (k + i <= n)
-				{
-					_putchar(' ');
+				if(j < n)
+				{ 
+					_putchar(',');
 				}
-				_putchar(' ');
+				if (k < 99 && k > 9)
+				{
+					_putchar(32);
+				}
+				if (k < 10)
+				{
+					_putchar(32);
+					_putchar(32);
+				}
+				_putchar(32);
 			}
 		}
 		_putchar('\n');
