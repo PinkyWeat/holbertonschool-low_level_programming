@@ -44,8 +44,8 @@ void print_times_table(int n)
 				_putchar(',');
 				if (k + i <= n)
 				{
-				_putchar(' ');
-				
+					_putchar(' ');
+				}
 				_putchar(' ');
 			}
 		}
