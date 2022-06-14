@@ -1,8 +1,9 @@
 #include "main.h"
 /**
-* reset_to_98 - resets n to 98
+* swap_int - swaps values
 *
-*  @n: value assigned by user
+* @a: value assigned by user
+* @b: value assigned by user
 */
 void swap_int(int *a, int *b)
 {
@@ -12,8 +13,3 @@ void swap_int(int *a, int *b)
 	*a = *b;
 	*b = swap;
 }
-
-
-
-
-			
