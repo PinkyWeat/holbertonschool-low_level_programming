@@ -8,11 +8,10 @@ void rev_string(char *s)
 	int x, y;
 	char z;
 
-	while(s[x] != '\0')
-	{
-		x++;
-	}
-	for(y = 0, x = x - 1; y < x; y++, x--)
+	for (x = 0; s[x] != '\0'; x++)
+	{}
+
+	for (y = 0, x = x - 1; y < x; y++, x--)
 	{
 		z = s[y];
 		s[y] = s[x];
