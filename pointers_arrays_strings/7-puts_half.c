@@ -23,7 +23,7 @@ void puts_half(char *str)
 		n = (c / 2);
 		n = n + 1;
 	}
-	for (; n <= c; n++)
+	for (; str[n] != '\0'; n++)
 	{
 		_putchar(str[n]);
 	}
