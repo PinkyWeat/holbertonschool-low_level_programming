@@ -1,8 +1,8 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * print_rev - print string in reverse.
- * @s: a string.
+ * puts2 - print every other char.
+ * @str: a string.
  *
  */
 void puts2(char *str)
