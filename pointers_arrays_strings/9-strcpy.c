@@ -1,10 +1,11 @@
 #include "main.h"
 /**
- * puts_half - puts half o the string.
- * @str: print
- *
+ * _strcpy - copies string..
+ * @dest: ctrl+v.
+ * @src: ctrl+c.
+ * Return: dest.
  */
-char * _strcpy(char * dest, char * src)
+char *_strcpy(char *dest, char *src)
 {
 	int i = 0;
 
