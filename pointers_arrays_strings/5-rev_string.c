@@ -1,20 +1,18 @@
 #include "main.h"
 /**
- * rev_string - reverses a string.
- * @s: position.
- */
-void rev_string(char *s)
+* reverse_array - reverse array
+* @a: array
+* @n: array length
+*/
+void reverse_array(int *a, int n)
 {
-	int x, y;
-	char z;
+	int i = 0;
+	int j;
 
-	for (x = 0; s[x] != '\0'; x++)
-	{}
-
-	for (y = 0, x = x - 1; y < x; y++, x--)
+	for (n = n - 1; i < n; i++, n--)
 	{
-		z = s[y];
-		s[y] = s[x];
-		s[x] = z;
+		j = a[i];
+		a[i] = a[n];
+		a[n] = j;
 	}
 }
