@@ -7,9 +7,10 @@
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int i = 0, x, rbytes;
+	int i, x;
+	unsigned int rbytes;
 
-	while (s[i])
+	 for (i = 0; s[i]; i++)
 	{
 		x = 0;
 		while (accept[x])
@@ -18,6 +19,7 @@ unsigned int _strspn(char *s, char *accept)
 			{
 				rbytes++;
 			}
+			x++;
 		}
 	}
 	return(rbytes);
