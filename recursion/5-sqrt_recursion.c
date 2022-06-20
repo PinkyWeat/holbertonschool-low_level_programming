@@ -1,13 +1,11 @@
 #include "main.h"
 /**
- * _sqrt_recursion - returns the natural square root of a number.
- * @n: number we'll find the natural square root of.
- * aux - auxiliar function.
- * @num - would be n.
- * @x - the natural square.
- * Return: n.
+ * _aux - finds the square.
+ * @num: would be n.
+ * @x: the natural square.
+ * Return: the natural square or error.
  */
-int aux(int num, int x)
+int _aux(int num, int x)
 {
 	int square;
 
@@ -19,6 +17,11 @@ int aux(int num, int x)
 	else
 		return (-1);
 }
+/**
+ * _sqrt_recursion - calls aux to find the natural square of a number.
+ * @n: the number we want to find the natural square of.
+ * Return: the natural square.
+ */
 int _sqrt_recursion(int n)
 {
 	return (aux(n, 1));
