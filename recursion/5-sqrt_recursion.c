@@ -24,5 +24,5 @@ int _aux(int num, int x)
  */
 int _sqrt_recursion(int n)
 {
-	return (aux(n, 1));
+	return (_aux(n, 1));
 }
