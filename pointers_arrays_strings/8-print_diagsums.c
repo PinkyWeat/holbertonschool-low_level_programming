@@ -7,7 +7,7 @@
  */
 void print_diagsums(int *a, int size)
 {
-	int i, j = size - 1, r1 = 0, r2 = 0;
+	int i = 0, j = size - 1, r1 = 0, r2 = 0;
 
 	while (i <= (size * size))
 	{
