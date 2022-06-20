@@ -13,7 +13,7 @@ int _aux(int num, int x)
 	if (square == num)
 		return (x);
 	else if (square < num)
-		return (aux(num, (x + 1)));
+		return (_aux(num, (x + 1)));
 	else
 		return (-1);
 }
