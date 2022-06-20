@@ -19,4 +19,6 @@ int is_prime_number(int n);
 
 int _aux(int num, int x);
 
+int aux(int num, int x);
+
 #endif
