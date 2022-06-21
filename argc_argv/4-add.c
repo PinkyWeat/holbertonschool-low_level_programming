@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 /**
  * main - entry point, adds positive numbers.
  * @argc: sum.
@@ -8,8 +9,11 @@
  */
 int main(int argc, char *argv[])
 {
-	int i, j, r;
+	int i, j, sum;
 
+	if (argc == 0)
+		printf("0\n");
+	
 	for (i = 1; i < argc; i++)
 	{
 		for (j = 0; argv[i][j]; j++)
@@ -21,8 +25,9 @@ int main(int argc, char *argv[])
 			}
 		}
 	}
-	for (i = 1; i < argc; i++)
-		r + = atoi (argv[i]);
-	printf("%d\n", r);
+	for (i = 0, sum = 0; argv[i]; i++)
+		sum + = atoi (argv[i]);
+	
+	printf("%d\n", sum);
 	return (0);
 }
