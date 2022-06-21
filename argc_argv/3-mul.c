@@ -6,7 +6,7 @@
  * @argv: multiplied
  * Return: 0.
  */
-int main(int argc, int *argv[])
+int main(int argc, char *argv[])
 {
 	int n, m, r;
 
@@ -19,8 +19,8 @@ int main(int argc, int *argv[])
 	{
 		n = atoi(argv[1]);
 		m = atoi(argv[2]);
-		j = (m * n);
-		printf("%d\n", j);
+		r = (m * n);
+		printf("%d\n", r);
 		return (0);
 	}
 }
