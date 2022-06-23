@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 /**
- * _strdup - function that concatenates two strings..
+ * _str_concat - function that concatenates two strings..
  * @s1: ctrl + c.
  * @s2: ctrl + v.
  * Return: final pointer.
@@ -19,5 +19,5 @@ char *str_concat(char *s1, char *s2)
 	for (p2 = 0; s2[p2]; p2++, p1++)
 		conc[p1] = s2[p2];
 	conc[p1] = '\0';
-	return(conc);
+	return (conc);
 }
