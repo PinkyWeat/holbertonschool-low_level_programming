@@ -15,7 +15,7 @@ char *_strdup(char *str)
 
 	if (paste == NULL)
 		return (NULL);
-	for (i = 0; paste[i]; i++)
+	for (i = 0; i < len; i++)
 		paste[i] = str[i];
 	paste[i] = '\0';
 	return (paste);	
