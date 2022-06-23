@@ -1,16 +1,16 @@
 *************** ARGC and ARGV ****************
-* ARGC :				     *
+* ARGC :				                             *
 *  --> The number of command line arguments  *
 *  --> The size of the argv array            *
-*					     *
+*					                                   *
 * ARGV :                                     *
 *  --> An array containing the program       *
 *      command line arguments.               *
 *  --> An array of size argc.                *
-*					     *
+*					                                   *
 **********************************************
 *************** My code **********************
-*					     *
+*					                                   *
 * 0-whatsmyname.c ** program that prints its *
 ************** name, followed by a new line. *
 ******** 1-args.c ** program that prints the *
@@ -21,5 +21,5 @@
 ******************************* two numbers. *
 ********* 4-add.c ** ***** program that adds *
 ************************** positive numbers. *
-*                 			     *
+*                 			                     *
 **********************************************
