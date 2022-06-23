@@ -16,8 +16,6 @@ char *str_concat(char *s1, char *s2)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
-	if (conc == NULL)
-		return (NULL);
 	for (p1 = 0; s1[p1]; p1++)
 		conc[p1] = s1[p1];
 	for (p2 = 0; s2[p2]; p2++, p1++)
