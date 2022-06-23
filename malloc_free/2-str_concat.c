@@ -1,4 +1,4 @@
-i#include "main.h"
+#include "main.h"
 #include <stdlib.h>
 /**
  * _strdup - function that concatenates two strings..
