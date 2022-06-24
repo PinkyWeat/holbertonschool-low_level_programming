@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
+#include <string.h>
 /**
  * free_grid - frees a 2D gird previously created.
  * @grid: the filling.
@@ -9,9 +10,9 @@ void free_grid(int **grid, int height)
 {
 	int i;
 
-	for (i = height; i >= 0; i++)
+	for (i = height - 1; i >= 0; i--)
 	{
-		free(array[i]);
+		free(grid[i]);
 	}
-	free(array);
+	free(grid);
 }
