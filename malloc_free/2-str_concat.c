@@ -20,16 +20,23 @@ char *str_concat(char *s1, char *s2)
 	if (s1 == NULL && s2 != NULL)
 		len = strlen(s2);
 	if (s1 != NULL && s2 != NULL)
-		len = (strlen(s1) + strlen(s2)) + 1;
+		len = (strlen(s1) + strlen(s2));
 	/* Above: in case s1 or s2 have null value */
+	len += 1; /* For the '\0' */
 	conc = malloc(len);
 	if (conc == NULL)
 		return (NULL);
 	/* Above: checking string with malloc */
-	for (p1 = 0; s1[p1]; p1++)
-		conc[p1] = s1[p1];
-	for (p2 = 0; s2[p2]; p2++, p1++)
-		conc[p1] = s2[p2];
+	if (s1 != NULL)
+	{
+		for (p1 = 0; s1[p1]; p1++)
+			conc[p1] = s1[p1];
+	}
+	if (s2 != NULL)
+	{	
+		for (p2 = 0; s2[p2]; p2++, p1++)
+			conc[p1] = s2[p2];
+	}
 	conc[p1] = '\0';
 	return (conc);
 }
