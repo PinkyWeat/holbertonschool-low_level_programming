@@ -12,20 +12,16 @@
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *juan;
-	int lenN, lenO, i;
+	int lenN = strlen(name), lenO = strlen(owner), i;
 
-	/* length of memory we will need */
-	lenN = strlen(name);
-	lenO = strlen(owner);
-	
 	/* Allocating memory */
 	juan = malloc(sizeof(dog_t));
 	if (juan == NULL)
 	{
 		free(juan);
 		return (NULL);
-	}	
-	
+	}
+	/* */
 	juan->name = malloc(lenN + 1);
 	if (juan->name == NULL)
 	{
@@ -33,9 +29,9 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(juan);
 		return (NULL);
 	}
-
+	/* */
 	juan->owner = malloc(lenO + 1);
-	if(juan->owner == NULL)
+	if (juan->owner == NULL)
 	{
 		free(juan->owner);
 		free(juan->name);
