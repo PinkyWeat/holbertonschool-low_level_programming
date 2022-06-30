@@ -1,3 +1,5 @@
+#include "3-calc.h"
+#include <stddef.h>
 /**
  * get_op_func - gets the correct function.
  * @s: function name.

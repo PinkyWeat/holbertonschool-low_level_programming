@@ -1,11 +1,14 @@
 #include "function_pointers.h"
+#include "3-calc.h"
 #include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 /**
  *
  */
 int main(int argc, char *argv[])
 {
-	int a = atoi(argv[1]), b = atoi(argv[3]);
+	int a, b;
 	int (*f)(int, int);
 
 	if (argc != 4)
@@ -21,5 +24,8 @@ int main(int argc, char *argv[])
 		exit(99);
 	}
 
+	a = atoi(argv[1]);
+	b = atoi(argv[3]);
 	printf("%d\n", f(a,b));
+	return (0);
 }
