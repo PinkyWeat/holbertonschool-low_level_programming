@@ -4,7 +4,10 @@
 #include <string.h>
 #include <stdlib.h>
 /**
- *
+ * main - entry point.
+ * @argv: content.
+ * @argc: argument count.
+ * Return: 0 for success.
  */
 int main(int argc, char *argv[])
 {
@@ -26,6 +29,12 @@ int main(int argc, char *argv[])
 
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
-	printf("%d\n", f(a,b));
+	if (b == 0)
+	{
+		printf("Error\n");
+		exit(100);
+	}
+
+	printf("%d\n", f(a, b));
 	return (0);
 }
