@@ -1,6 +1,6 @@
 #include "3-calc.h"
 /**
- * op_add: adds a and b.
+ * op_add - adds a and b.
  * @a: first num.
  * @b: second num.
  * Return: the addition of and b.
