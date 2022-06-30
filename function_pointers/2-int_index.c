@@ -4,6 +4,7 @@
  * @array: an array.
  * @size: size of array.
  * @cmp: the function.
+ * Return: index or -1 for error.
  */
 int int_index(int *array, int size, int (*cmp)(int))
 {
@@ -18,7 +19,7 @@ int int_index(int *array, int size, int (*cmp)(int))
 		{
 			if ((*cmp)(array[i]))
 				return (i);
-		}	
+		}
 	}
 	return (-1);
 }
