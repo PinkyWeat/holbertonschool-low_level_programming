@@ -1,6 +1,6 @@
 #include "variadic_functions.h"
 /**
- * print_All - prints anything literally.
+ * print_all - prints anything literally.
  * @format: format used (char, int, etc).
  */
 void print_all(const char * const format, ...)
@@ -11,7 +11,6 @@ void print_all(const char * const format, ...)
 
 	if (format)
 		formatSelect = strlen(format);
-	
 	va_start(x, format);
 	while (format && format[i])
 	{
@@ -19,7 +18,7 @@ void print_all(const char * const format, ...)
 		switch (format[i])
 		{
 		case 'c':
-			printf("%c",va_arg(x, int));
+			printf("%c", va_arg(x, int));
 			cond = 1;
 			break;
 		case 'i':
