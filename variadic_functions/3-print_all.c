@@ -7,12 +7,13 @@ void print_all(const char * const format, ...)
 {
 	va_list x;
 	char *string;
-	int i, cond, formatSelect;
+	int i = 0, cond, formatSelect;
 
+	if (format)
+		formatSelect = strlen(format);
+	
 	va_start(x, format);
-	i = 0;
-	formatSelect = strlen(format);
-	while (format[i])
+	while (format && format[i])
 	{
 		cond = 0;
 		switch (format[i])
@@ -39,6 +40,6 @@ void print_all(const char * const format, ...)
 			printf(", ");
 		i++;
 	}
-	va_end(x);
 	printf("\n");
+	va_end(x);
 }
