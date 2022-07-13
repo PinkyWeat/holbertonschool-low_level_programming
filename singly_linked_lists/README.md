@@ -40,4 +40,4 @@ We compile with:
 ---
 ### Authors
 
-Written by [Denisse Landau](https://www.linkedin.com/in/deni    sse-l-5844a5140/ "Denisse Landau") based on Holberton School project "C - Singly linked lists".
+Written by [Denisse Landau](https://www.linkedin.com/in/denisse-l-5844a5140/ "Denisse Landau") based on Holberton School project "C - Singly linked lists".
