@@ -7,28 +7,28 @@
  */
 list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *newNode, *aux;
+	list_t *newNode, *aux = *head;
 
-	if (head == NULL)
-		return (NULL);
 	newNode = malloc(sizeof(list_t));
-	if (newNode == NULL)
-		return (NULL);
-	if (*head == NULL)
-		*head = newNode;
-	else
+	
+	if (newNode)
 	{
-		aux = *head;
+		if (*head == NULL)
+			*head = newNode;
+		else
+		{
 		/* loop to give address of last node by not having next node*/
-		while (aux->next != NULL)
-			aux = aux->next;
+			while (aux->next != NULL)
+				aux = aux->next;
 		/* make newNode last node */
-		aux->next = newNode;
-	}
+			aux->next = newNode;
+		}
 	/* Fill in new node */
 	newNode->str = strdup(str);
 	newNode->len = strlen(str);
 	newNode->next = NULL;
-	*head = newNode;
+}
+	else
+		free(newNode);
 	return (newNode);
 }
