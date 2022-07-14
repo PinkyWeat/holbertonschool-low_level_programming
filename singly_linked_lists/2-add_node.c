@@ -20,6 +20,6 @@ list_t *add_node(list_t **head, const char *str)
 		newNode->next = *head; /* links address */
 		*head = newNode;
 	}
-	return (newNode->next);
+	return (newNode);
 	
 }
