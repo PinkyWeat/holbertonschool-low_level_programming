@@ -9,11 +9,15 @@ list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *newNode, *aux;
 
+	if (!head)
+		return (NULL);
 	if (*head)
 		aux = *head;
 	newNode = malloc(sizeof(list_t));
 	if (!newNode)
 		return (NULL);
+	if (!*head)
+		*head = newNode;
 	/* loop to give address of last node by not having next node*/
 	while (aux->next != NULL)
 	{
