@@ -18,6 +18,7 @@ list_t *add_node(list_t **head, const char *str)
 		newNode->str= strdup(str);
 		newNode->len = strlen(str); /* links data part */
 		newNode->next = *head; /* links address */
+		*head = newNode;
 	}
 	return (newNode->next);
 	
