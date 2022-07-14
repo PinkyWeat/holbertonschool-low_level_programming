@@ -23,11 +23,11 @@ list_t *add_node_end(list_t **head, const char *str)
 			aux = aux->next;
 		/* make newNode last node */
 		aux->next = newNode;
-		/* Fill in new node */
-		newNode->str = strdup(str);
-		newNode->len = strlen(str);
-		newNode->next = NULL;
-		*head = newNode;
 	}
+	/* Fill in new node */
+	newNode->str = strdup(str);
+	newNode->len = strlen(str);
+	newNode->next = NULL;
+	*head = newNode;
 	return (newNode);
 }
