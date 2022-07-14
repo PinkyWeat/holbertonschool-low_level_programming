@@ -21,7 +21,7 @@ Like arrays, Linked List is a linear data structure. Unlike arrays, [linked list
 
 Function porototype:
 
-	int _printf(const char *format, ...);
+	size_t print_listint(const listint_t *h);	
 
 We compile with:
 
