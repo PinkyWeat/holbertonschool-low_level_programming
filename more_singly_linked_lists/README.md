@@ -10,7 +10,7 @@ Like arrays, Linked List is a linear data structure. Unlike arrays, [linked list
 
 ### Requirements
 
-- All files will be compiled on Ubuntu 20.04 LTS using gcc, using the options ``-Wall -Werror -Wextra -pedantic-std=gnu89``.
+- All files will be compiled on Ubuntu 20.04 LTS using gcc, using the options ``-Wall -Werror -Wextra -pedantic-std=gnu89``
 - Code uses the Betty style. It will be checked using betty-style.pl and betty-doc.pl
 - No global variables are allowed.
 - No more than 5 functions per file.
