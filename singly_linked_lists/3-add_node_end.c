@@ -12,12 +12,13 @@ list_t *add_node_end(list_t **head, const char *str)
 	if (head == NULL)
 		return (NULL);
 	newNode = malloc(sizeof(list_t));
-	if (!newNode)
+	if (newNode == NULL)
 		return (NULL);
 	if (*head == NULL)
 		*head = newNode;
 	else
 	{
+		aux = *head;
 		/* loop to give address of last node by not having next node*/
 		while (aux->next != NULL)
 			aux = aux->next;
