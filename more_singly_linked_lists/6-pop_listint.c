@@ -7,7 +7,7 @@
 int pop_listint(listint_t **head)
 {
 	listint_t *ripNode;
-	int data = 0 ;
+	int data = 0;
 
 	/* checks if head has data */
 	if (*head == NULL)
