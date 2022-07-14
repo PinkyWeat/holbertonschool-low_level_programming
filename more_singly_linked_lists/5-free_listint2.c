@@ -5,7 +5,7 @@
  */
 void free_listint2(listint_t **head)
 {
-	listint_t *freeMe = *head;
+	listint_t *freeMe;
 
 	if (!head)
 		return;
