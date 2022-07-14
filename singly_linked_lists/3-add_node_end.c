@@ -9,28 +9,25 @@ list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *newNode, *aux;
 
-	if (!head)
+	if (head == NULL)
 		return (NULL);
-	if (*head)
-		aux = *head;
 	newNode = malloc(sizeof(list_t));
 	if (!newNode)
 		return (NULL);
-	if (!*head)
+	if (*head == NULL)
 		*head = newNode;
-	/* loop to give address of last node by not having next node*/
-	while (aux->next != NULL)
+	else
 	{
-		printf("antes");
-		aux = aux->next;
-		printf("despues");
+		/* loop to give address of last node by not having next node*/
+		while (aux->next != NULL)
+			aux = aux->next;
+		/* make newNode last node */
+		aux->next = newNode;
+		/* Fill in new node */
+		newNode->str = strdup(str);
+		newNode->len = strlen(str);
+		newNode->next = NULL;
+		*head = newNode;
 	}
-	/* make newNode last node */
-	aux->next = newNode;
-	/* Fill in new node */
-	newNode->str = strdup(str);
-	newNode->len = strlen(str);
-	newNode->next = NULL;
-	*head = newNode;
 	return (newNode);
 }
