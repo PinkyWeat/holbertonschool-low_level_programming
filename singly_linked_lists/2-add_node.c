@@ -1,7 +1,7 @@
 #include "lists.h"
 /**
  * add_node - adds a new node at the beginning.
- * @head: first node.
+ * @head: pointer pointing to a linked list.
  * @str: what will be added.
  * Return: address of new element or NULL.
  */
