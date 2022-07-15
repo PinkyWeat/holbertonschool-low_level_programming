@@ -16,21 +16,26 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	/* check space */
 	if (!newNode)
 		return (NULL);
+	newNode->n = n;
 	/* Make it first node */
 	if (idx == 0)
-		*head = newNode;
-	/* loop through until index */
-	for (counter = 0; counter < (idx - 1) && aux; counter++)
 	{
-		if (*head == NULL)
+		newNode->next = *head;
+		*head = newNode;
+		return (newNode);
+	}
+	/* loop through until index */
+	while (counter < (idx - 1) && aux)
+	{
+		if (aux->next == NULL)
 			return (NULL);
+		counter++;
 		aux = aux->next;
 	}
 	/* Give address */
 	newNode->next = aux->next;
 	/* Add new node at idx */
 	aux->next = newNode;
-	/* fill in info of newNode */
-	newNode->n = n;
+
 	return (newNode);
 }
