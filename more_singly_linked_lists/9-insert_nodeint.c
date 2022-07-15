@@ -20,7 +20,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	for (counter = 0; counter < (idx - 1) && aux; counter++)
 	{
 		if (*head == NULL)
-			return (NULL);
+			*head = newNode;
 		aux = aux->next;
 	}
 	/* Give address */
