@@ -16,6 +16,9 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	/* check space */
 	if (!newNode)
 		return (NULL);
+	/* Make it first node */
+	if (idx == 0)
+		*head = newNode;
 	/* loop through until index */
 	for (counter = 0; counter < (idx - 1) && aux; counter++)
 	{
