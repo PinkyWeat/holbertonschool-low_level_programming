@@ -43,6 +43,10 @@ We compile with:
 - **9-insert_nodeint.c** - file contains a function that inserts a new node at a given position.
 - **10-delete_nodeint.c** - file contains a function that deletes the node at index index of a 	``listint_t`` linked list.
 
+Advanced tasks:
+
+- **100-reverse_listint.c** - file contains a function that reverses a ``listint_t`` linked list.
+
 ---
 
 ### Author
