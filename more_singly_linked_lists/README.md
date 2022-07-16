@@ -45,7 +45,7 @@ We compile with:
 
 Advanced tasks:
 
-- **100-reverse_listint.c** - file contains a function that reverses a ``listint_t`` linked list.
+- **100-reverse_listint.c** - file contains two functions, a main one and an auxiliary that reverses a ``listint_t`` linked list recursively.
 
 ---
 
