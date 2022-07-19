@@ -33,4 +33,4 @@ In the C programming language, operations can be performed on a bit level using 
 
 ### Author
 
-Written by [Denisse Landau](https://www.linkedin.com/in/denisselandau/ "Denisse Landau") based on Holberton School project "C - Mo    re singly linked lists".
+Written by [Denisse Landau](https://www.linkedin.com/in/denisselandau/ "Denisse Landau") based on Holberton School project "C - Bit Manipulation".
