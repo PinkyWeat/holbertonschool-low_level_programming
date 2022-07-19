@@ -9,7 +9,7 @@ int get_bit(unsigned long int n, unsigned int index)
 {
 	unsigned int pepei = 0;
 
-	if (index >= i)
+	if (index >= pepei)
 		return ((n & (1 << index)) >> index);
 	else
 		return (-1);
