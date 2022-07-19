@@ -1,4 +1,5 @@
 #include "main.h"
+#include <limits.h>
 /**
  * get_bit - function that returns the value of a bit at a given index.
  * @n: number given.
@@ -7,7 +8,7 @@
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
-	unsigned long int *bitsies = malloc(sizeof(unsigned long int) * n), pepei = 0;
+	unsigned long int *bitsies = malloc(sizeof(long int) * 5000), pepei = 0;
 
 	if (bitsies == NULL) /* Check malloc */
 		return (-1);
