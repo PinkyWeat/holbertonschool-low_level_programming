@@ -7,7 +7,7 @@
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
-	int *bitsies = malloc(sizeof(int) * n), pepei = 0;
+	unsigned long int *bitsies = malloc(sizeof(int) * n), pepei = 0;
 
 	if (!bitsies) /* Check malloc */
 		return (-1);
