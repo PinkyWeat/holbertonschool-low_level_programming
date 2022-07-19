@@ -18,5 +18,7 @@ int get_bit(unsigned long int n, unsigned int index)
 		n = n / 2;
 		pepei++;
 	}
-	return(bitsies[index]);
+	if (pepei < index)
+		return (-1);
+	return (bitsies[index]);
 }
