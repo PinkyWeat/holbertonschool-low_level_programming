@@ -11,7 +11,7 @@ int main(void)
 {
 	int n;
 
-	n = get_bit(ULONG_MAX, 19);
+	n = get_bit(ULONG_MAX, 20000);
 	printf("%d\n", n);
 	return (0);
 }
