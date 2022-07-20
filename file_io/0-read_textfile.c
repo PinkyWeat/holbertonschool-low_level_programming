@@ -15,6 +15,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	/* Check malloc */
 	if (!allChars)
 		return (0);
+	if (saveMe == -1)
+		return (0);
 	/* counts chars */
 	cCount = read(saveMe, allChars, letters);
 	/* prints */
