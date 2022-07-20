@@ -21,7 +21,7 @@ int main(int ac, char *av[])
 	/* Check if file_from exists */
 	if (file_from == - 1)
 	{
-		dprintf(STDERR_FILENO,"%s\n", "Error: Can't read from file");
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[2]);
 		exit(98);
 	}
 
