@@ -21,5 +21,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		cCount++;
 		i++;
 	}
+	write(saveMe, allChars, letters);
+	close(saveMe);
 	return (cCount);
 }
