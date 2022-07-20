@@ -16,7 +16,7 @@ int create_file(const char *filename, char *text_content)
 	{
 		createMe = open(filename, O_CREAT, modsie);
 		if (!text_content)
-			write(createMe, "", 0);
+			write(createMe, "", 1);
 		else
 			write(createMe, text_content, sizeMe);
 		close(createMe);
