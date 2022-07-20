@@ -11,8 +11,6 @@ int create_file(const char *filename, char *text_content)
 	mode_t modsie = S_IRUSR | S_IWUSR;
 
 	if (!filename)
-		return (-1);
-	else
 	{
 		createMe = open(filename, O_CREAT, modsie);
 		if (!text_content)
@@ -20,6 +18,8 @@ int create_file(const char *filename, char *text_content)
 		else
 			write(createMe, text_content, sizeMe);
 		close(createMe);
-		return (1);
 	}
+	if (filename == NULL)
+		return (-1);
+	return (1);
 }
