@@ -41,7 +41,7 @@ int main(int ac, char *av[])
 		if (readMe == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[2]);
-			exit(99);
+			exit(98);
 		}
 		/* write? */
 		writeMe = write(file_to, cCount, readMe);
