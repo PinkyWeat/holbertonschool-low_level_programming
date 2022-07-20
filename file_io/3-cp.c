@@ -21,11 +21,11 @@ int main(int ac, char *av[])
 	/* Check if file_from exists */
 	if (file_from == - 1)
 	{
-		dprintf(STDERR_FILENO,"Error: %s Can't read from file %s", av[1]);
+		dprintf(STDERR_FILENO,"%s\n", "Error: Can't read from file");
 		exit(98);
 	}
 
-	file_to = open(av[2], O_CREAT | O_TRUNC | o_WRONLY, 0664);
+	file_to = open(av[2], O_CREAT | O_TRUNC | O_WRONLY, 0664);
 	/* Check file_to */
 	if (file_to == -1)
 	{
