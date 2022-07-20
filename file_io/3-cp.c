@@ -5,7 +5,7 @@
  * @argv: arg info.
  * Return: 99 / 98 / 97.
  */
-int main(int ac, char *av)
+int main(int ac, char *av[])
 {
 	int file_from, file_to, readMe = 1024, writeMe, closeMe;
 	char *cCount[1024];
