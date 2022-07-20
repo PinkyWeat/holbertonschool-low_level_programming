@@ -7,7 +7,7 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-	int createMe, sizeMe = strlen(text_content);
+	int createMe;
 
 	if (!filename)
 		return (-1);
@@ -18,7 +18,7 @@ int create_file(const char *filename, char *text_content)
 		return (-1);
 	/* if there's content write it */
 	if (text_content)
-		write(createMe, text_content, sizeMe);
+		write(createMe, text_content, strlen(text_content));
 	close(createMe);
 	return (1);
 }
