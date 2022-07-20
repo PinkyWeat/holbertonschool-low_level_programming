@@ -7,24 +7,18 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int cCount = 0, saveMe = open(filename, O_RDONLY);
-	void *allChars = malloc(sizeof(char) * letters);
-	size_t i = 0;
+	int cCount, saveMe = open(filename, O_RDONLY);
+	char *allChars = malloc(sizeof(char) * letters);
 
-	if (filename == NULL)
+	if (!filename)
 		return (0);
-	else
-	{
-		/* save all chars in allChars, len is letters */
-		read(saveMe, allChars, letters);
-		/* count chars */
-		while (i < letters)
-		{
-			cCount++;
-			i++;
-		}
-		write(STDOUT_FILENO, allChars, letters);
-		close(saveMe);
-	}
+	/* Check malloc */
+	if (!allChars)
+		return (0);
+	/* counts chars */
+	cCount = read(saveMe, allChars, letters);
+	/* prints */
+	write(STDOUT_FILENO, allChars, cCount);
+	close(saveMe);
 	return (cCount);
 }
