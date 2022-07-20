@@ -13,15 +13,18 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	if (filename == NULL)
 		return (0);
-	/* save all chars in allChars, len is letters */
-	read(saveMe, allChars, letters);
-	/* count chars */
-	while (i < letters)
+	else
 	{
-		cCount++;
-		i++;
+		/* save all chars in allChars, len is letters */
+		read(saveMe, allChars, letters);
+		/* count chars */
+		while (i < letters)
+		{
+			cCount++;
+			i++;
+		}
+		write(STDOUT_FILENO, allChars, letters);
+		close(saveMe);
 	}
-	write(STDOUT_FILENO, allChars, letters);
-	close(saveMe);
 	return (cCount);
 }
