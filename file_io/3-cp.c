@@ -45,7 +45,7 @@ int main(int ac, char *av[])
 		}
 		/* write? */
 		writeMe = write(file_to, cCount, readMe);
-		if (readMe == -1)
+		if (writeMe == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
 			exit(99);
