@@ -2,16 +2,16 @@
 /**
  * create_file - function that creates a file.
  * @filename: name of file.
- * @text_contesnt: content.
+ * @text_content: content.
  * Return: 1 success, -1 failure.
  */
 int create_file(const char *filename, char *text_content)
 {
-	int createMe;
+	int createMe, sizeMe = strlen(text_content);
 	mode_t modsie = S_IRUSR | S_IWUSR;
 
 	if (!filename)
-		return(-1);
+		return (-1);
 	/* create file */
 	createMe = open(filename, O_RDWR | O_CREAT | O_TRUNC, modsie);
 	/* check creation */
@@ -19,7 +19,7 @@ int create_file(const char *filename, char *text_content)
 		return (-1);
 	/* if there's content write it */
 	if (text_content)
-		write(createMe, "1", 1);
+		write(createMe, text_content, sizeMe);
 	close(createMe);
 	return (1);
 }
