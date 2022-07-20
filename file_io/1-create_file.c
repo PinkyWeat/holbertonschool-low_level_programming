@@ -7,7 +7,7 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-	int createMe, sizeMe = strlen(text_content);
+	int createMe, sizeMe = strlen(text_content), newW;
 	mode_t modsie = S_IRUSR | S_IWUSR;
 
 	if (!filename)
@@ -19,7 +19,12 @@ int create_file(const char *filename, char *text_content)
 		return (-1);
 	/* if there's content write it */
 	if (text_content)
-		write(createMe, text_content, sizeMe);
+		newW = write(createMe, text_content, sizeMe);
+	if (newW == -1)
+	{
+		close(createMe);
+		return (-1);
+	}
 	close(createMe);
 	return (1);
 }
