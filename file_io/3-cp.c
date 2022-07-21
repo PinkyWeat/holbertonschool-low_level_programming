@@ -29,7 +29,7 @@ void copy_text(const char *from, const char *to)
 
 	file_from = open(from, O_RDONLY);
 	/* Check if file_from exists */
-	if (file_from == - 1)
+	if (file_from == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %d\n", from[1]);
 		exit(98);
