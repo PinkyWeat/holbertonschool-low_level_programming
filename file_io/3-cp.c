@@ -8,7 +8,7 @@
 int main(int ac, char *av[])
 {
 	/* Check arg num */
-	if (ac != 2)
+	if (ac != 3)
 	{
 		dprintf(STDERR_FILENO, "%s\n", "Usage: cp file_from file_to");
 		exit(97);
