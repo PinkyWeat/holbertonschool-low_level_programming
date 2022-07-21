@@ -31,7 +31,7 @@ void copy_text(const char *from, const char *to)
 	/* Check if file_from exists */
 	if (file_from == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %d\n", from[1]);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", from);
 		exit(98);
 	}
 
@@ -39,25 +39,25 @@ void copy_text(const char *from, const char *to)
 	/* Check file_to */
 	if (file_to == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %d\n", to[2]);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", to);
 		exit(99);
 	}
 
 	/* check readMe */
-	while (readMe == 1024)
+	while (readMe == 5555)
 	{
 		/* read? */
 		readMe = read(file_from, cCount, 5555);
 		if (readMe == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't read from file %d\n", to[1]);
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", to);
 			exit(98);
 		}
 		/* write? */
 		writeMe = write(file_to, cCount, readMe);
 		if (writeMe == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't write to %d\n", to[2]);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", to);
 			exit(99);
 		}
 	}
