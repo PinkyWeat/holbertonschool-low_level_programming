@@ -36,12 +36,8 @@ void copy_text(const char *from, const char *to)
 	}
 
 	file_to = open(to, O_CREAT | O_TRUNC | O_WRONLY, modsie);
-	/* Check file_to */
 	if (file_to == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", to);
-		exit(99);
-	}
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", to),exit(99);
 	readMe = read(file_from, cCount, 5555);
 	if (readMe == -1)
 	{
