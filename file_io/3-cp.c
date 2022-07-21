@@ -2,7 +2,7 @@
 /**
  * main - entry point.
  * @ac: arg count.
- * @argv: arg info.
+ * @av: arg info.
  * Return: 99 / 98 / 97.
  */
 int main(int ac, char *av[])
@@ -23,7 +23,7 @@ int main(int ac, char *av[])
  */
 void copy_text(const char *from, const char *to)
 {
-	int file_from, file_to, readMe = 5555, writeMe, closeMe;
+	int file_from, file_to, readMe = 5555, writeMe;
 	char *cCount[5555];
 	mode_t modsie = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
 
@@ -42,34 +42,24 @@ void copy_text(const char *from, const char *to)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", to);
 		exit(99);
 	}
-
-	/* check readMe */
-	while (readMe == 5555)
+	readMe = read(file_from, cCount, 5555);
+	if (readMe == -1)
 	{
-		/* read? */
-		readMe = read(file_from, cCount, 5555);
-		if (readMe == -1)
-		{
-			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", to);
-			exit(98);
-		}
-		/* write? */
-		writeMe = write(file_to, cCount, readMe);
-		if (writeMe == -1)
-		{
-			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", to);
-			exit(99);
-		}
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", to);
+		exit(98);
 	}
-	/* close */
-	closeMe = close(file_from);
-	if (closeMe == -1)
+	writeMe = write(file_to, cCount, readMe);
+	if (writeMe == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_from); 
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", to);
+		exit(99);
+	}
+	if (close(file_to) == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_from);
 		exit(100);
 	}
-	closeMe = close(file_to);
-	if (closeMe == -1)
+	if (close(file_from) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_to);
 		exit(100);
