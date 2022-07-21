@@ -18,4 +18,6 @@ int append_text_to_file(const char *filename, char *text_content);
 
 int main(int ac, char *av[]);
 
+void copy_text(const char *from, const char *to);
+
 #endif
