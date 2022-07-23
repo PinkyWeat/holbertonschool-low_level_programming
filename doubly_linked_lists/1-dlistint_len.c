@@ -1,4 +1,4 @@
-#include "main.h"
+#include "lists.h"
 /**
  * dlistint_len - returns num of elemts in a linked dlistint_t list.
  * @h: pointer to first node.
