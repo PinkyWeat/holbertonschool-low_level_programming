@@ -8,7 +8,7 @@
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	char *aux = NULL;
+	const char *aux = NULL;
 	unsigned long int kindex;
 	hash_node_t *newNode = NULL;
 
