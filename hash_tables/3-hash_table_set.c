@@ -1,4 +1,4 @@
-#include "hash_tables.h"
+#include "hast_tables.h"
 /**
  * hash_table_set - adds an element to the hash table.
  * @ht: hast table we are adding/updating the key/value to.
@@ -9,37 +9,38 @@
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	char *aux = NULL;
-	hash_node_t *newNode = malloc(sizeof(hash_node_t));
+	unsigned long int kindex;
+	hast_node_t *newNode = NULL;
 
-	if (!ht) /* Check if hash table */
-	{
-		free(newNode);
+	if (!ht || !key) /* Check if they have info */
 		return (0);
-	}
-	if (!newNode) /* Check malloc */
-		return (0);
-	if (!key) /* Key cannot be empty */
-		return (0);
-	newNode->key = key; /* sino se le agrega entonces */
-	if (!ht->array) /* Check if hay algo en el lugar de array*/
-	{
-		free(ht->array); /* y lo libera */
-		ht->array = NULL;
-	}
-	if (value) /* Check value before adding it */
-		aux = strdup(value); /* something so dup */
-	else
-	{
-		free(aux);
-		aux = NULL; /* empty string*/
-	}
-	newNode->value = aux; /* le puse value */
-	if (ht->array)/* ver sobre el next de newNode comoo NULL ponele*/
-	
+	index = key_index(key, ht->size); /* save index*/
+	aux = ht->array[kindex];
 
-	if (key == )
-	{ /* si no tiene value hay que agregar */
-		newNode->value = value;
-		newNode->key = 
+	while (aux)
+	{
+		if (strcmp(aux->, key) == 0)
+		{
+			free(aux->value);
+			aux->value = strdup(value);
+			return (1);
+		}
+		aux = aux->next;
 	}
+	newNode = malloc(sizeof(*newNode));
+	if (!newNode)
+		return (0); /* check malloc */
+	/* fill in info */
+	newNode->key = strdup(key);
+	newNode->value = strdup(value);
+	newNode->next = NULL;
+
+	if (ht->array[kindex] == NULL)
+	{
+		ht->array[kindex] = newNode;
+		return (1);
+	}
+	newNode->next = ht->array[kindex];
+	ht->array[kindex] = newNode;
+	return (1);
 }
