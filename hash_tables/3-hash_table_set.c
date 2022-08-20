@@ -10,7 +10,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	char *aux = NULL;
 	unsigned long int kindex;
-	hast_node_t *newNode = NULL;
+	hash_node_t *newNode = NULL;
 
 	if (!ht || !key) /* Check if they have info */
 		return (0);
