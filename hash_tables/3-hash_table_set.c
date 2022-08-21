@@ -14,7 +14,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	if (!ht || !key) /* Check if they have info */
 		return (0);
-	index = key_index(key, ht->size); /* save index*/
+	index = key_index(keydup, ht->size); /* save index*/
 	aux = ht->array[kindex];
 
 	while (aux)
