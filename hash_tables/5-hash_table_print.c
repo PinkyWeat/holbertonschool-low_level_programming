@@ -1,6 +1,6 @@
 #include "hash_tables.h"
 /**
- * hash_talbe_print - prints a hash table.
+ * hash_table_print - prints a hash table.
  * @ht: the hash table we'll print.
  */
 void hash_table_print(const hash_table_t *ht)
@@ -22,7 +22,7 @@ void hash_table_print(const hash_table_t *ht)
 			printf("'%s': '%s'", aux->key, aux->value);
 			if (centinel == '\0')
 				centinel = '1';
-			aux = aux->next; 
+			aux = aux->next;
 		}
 		kindex++;
 	}
