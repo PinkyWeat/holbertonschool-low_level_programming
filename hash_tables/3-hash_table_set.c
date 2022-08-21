@@ -14,12 +14,12 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	if (!ht || !key) /* Check if they have info */
 		return (0);
-	index = key_index(keydup, ht->size); /* save index*/
+	kindex = key_index(keydup, ht->size); /* save index*/
 	aux = ht->array[kindex];
 
 	while (aux)
 	{
-		if (strcmp(aux->, key) == 0)
+		if (strcmp(aux->key, key) == 0)
 		{
 			free(aux->value);
 			aux->value = strdup(value);
