@@ -9,15 +9,15 @@
 int binary_search(int *array, size_t size, int value)
 {
 	int index;
-	size_t i = 0, siz_e = 0;
+	size_t i = 0;
 
 	if (!array || size == 0)
 		return (-1);
 	size = size - 1;
-	while (i <= siz_e)
+	while (i <= size)
 	{
 		printMe(array, i, size);
-		index = (size - i) / 2 + 1;
+		index = (size - i) / 2 + i;
 		if (array[index] == value)
 			return (index);
 		else if (array[index] < value)
@@ -28,7 +28,10 @@ int binary_search(int *array, size_t size, int value)
 	return (-1);
 }
 /**
- *
+ * printMe - prints array.
+ * @array: array.
+ * @i: right lim.
+ * @size: left lim.
  */
 void printMe(int *array, size_t i, size_t size)
 {
